@@ -413,17 +413,37 @@
   .testimonials { background: var(--black); }
   .testimonials h2 { color: var(--white); }
   .test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 48px; }
-  .test-card { background: rgba(255,255,255,0.04); padding: 28px 24px; border-left: 2px solid rgba(245,194,0,0.2); }
+  .test-card { background: rgba(255,255,255,0.04); padding: 28px 24px; border-left: 2px solid rgba(245,194,0,0.2); display: flex; flex-direction: column; }
   .test-card p {
     font-family: 'Lora', serif; font-style: italic;
     font-size: 14px; line-height: 1.75;
     color: rgba(255,255,255,0.5);
+    flex: 1;
   }
   .test-card p::before { content: '\201C'; color: var(--gold); opacity: 0.5; font-size: 20px; }
+  .test-card.featured { background: rgba(245,194,0,0.05); border-left-color: rgba(245,194,0,0.5); }
+  .test-card.featured p { font-size: 15px; color: rgba(255,255,255,0.7); }
+  .test-attribution {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(245,194,0,0.12);
+  }
+  .test-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 13px;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--white);
+  }
+  .test-role {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-top: 2px;
+  }
 
   /* COURSES */
   .courses { background: var(--paper); }
-  .courses-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2px; margin-top: 48px; }
+  .courses-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 2px; margin-top: 48px; }
   .course-card {
     background: var(--white); padding: 36px 30px;
     border-top: 4px solid var(--mid);
@@ -461,6 +481,40 @@
   }
   .course-btn:hover { opacity: 0.88; }
   .course-btn.dark { background: var(--black); color: var(--gold); }
+
+  /* CONSULTING CARD */
+  .course-card.consulting-card {
+    background: var(--charcoal);
+    border-top-color: var(--gold);
+    position: relative;
+  }
+  .course-card.consulting-card h3 { color: var(--white); }
+  .course-card.consulting-card p { color: rgba(255,255,255,0.4); }
+  .course-card.consulting-card:hover { border-color: var(--gold); }
+  .consulting-services {
+    display: flex; flex-direction: column; gap: 6px;
+    margin-bottom: 24px; flex: 1;
+  }
+  .consulting-service-item {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 11px;
+    letter-spacing: 0.09em; text-transform: uppercase;
+    color: rgba(245,194,0,0.7);
+    padding: 7px 10px;
+    background: rgba(245,194,0,0.06);
+    border-left: 2px solid rgba(245,194,0,0.3);
+  }
+  .consulting-btn {
+    background: transparent !important;
+    border: 1px solid var(--gold) !important;
+    color: var(--gold) !important;
+    transition: background 0.2s, color 0.2s !important;
+  }
+  .consulting-btn:hover {
+    background: var(--gold) !important;
+    color: var(--black) !important;
+    opacity: 1 !important;
+  }
 
   /* SOCIAL */
   .social-strip { background: var(--charcoal); padding: 40px 48px; }
@@ -579,6 +633,10 @@
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* RESPONSIVE */
+  @media (max-width: 1200px) and (min-width: 961px) {
+    .courses-grid { grid-template-columns: 1fr 1fr; }
+  }
+
   @media (max-width: 960px) {
     nav { padding: 0 24px; }
     .nav-links { display: none; }
@@ -737,7 +795,7 @@
     <div class="resources-grid">
       <div class="resource-card reveal">
         <div class="resource-tag">Direct Entry</div>
-        <div class="resource-count">99+</div>
+        <div class="resource-count">112</div>
         <h3>BA/BS/MD and BS/DO Programs</h3>
         <p>The complete list of direct-entry combined degree programs in the United States, organized and filterable. The only comprehensive resource of its kind built specifically for acceleration-focused students.</p>
         <a href="https://bsmd.fasttracktomd.com" class="resource-link">Access the Full List →</a>
@@ -800,8 +858,8 @@
         <div class="sym-detail-val">Fast Track Foundations</div>
       </div>
       <div class="sym-detail-row">
-        <div class="sym-detail-label">Topics Covered</div>
-        <div class="sym-detail-val">Accelerated Pathways to MD/DO</div>
+        <div class="sym-detail-label">BS/MD programs covered</div>
+        <div class="sym-detail-val">112+</div>
       </div>
       <div class="sym-detail-row">
         <div class="sym-detail-label">Pathways mapped</div>
@@ -813,7 +871,7 @@
       </div>
       <div class="sym-detail-row">
         <div class="sym-detail-label">Built by</div>
-        <div class="sym-detail-val">Dr. Ruwaa Samarrai, MD</div>
+        <div class="sym-detail-val">MD at 23</div>
       </div>
       <div class="sym-detail-row">
         <div class="sym-detail-label">Payment</div>
@@ -832,23 +890,26 @@
       <div class="gold-divider"></div>
     </div>
     <div class="test-grid">
-      <div class="test-card reveal">
-        <p>I feel like I'm meeting a mystical creature only found in fairytales.</p>
+      <div class="test-card featured reveal">
+        <p>I cannot tell you how grateful I am to come across your page and how helpful you have been in this process. It's overwhelming and guidance from someone who has walked this path is truly invaluable.</p>
+        <div class="test-attribution">
+          <div class="test-name">Kanwal Rehman</div>
+          <div class="test-role">Premed Parent · 1:1 Consultation Client</div>
+        </div>
       </div>
-      <div class="test-card reveal" style="transition-delay:0.05s">
-        <p>Thank you for the insightful response and for taking the time to share your wisdom.</p>
+      <div class="test-card featured reveal" style="transition-delay:0.07s">
+        <p>We gained a clear, organized roadmap of the pre-med journey. The depth of information shared is truly invaluable, and much of it would have been extremely difficult for us to access or interpret clearly on our own. It brings clarity, reduces anxiety, and saves time by helping families avoid common mistakes.</p>
+        <div class="test-attribution">
+          <div class="test-name">Shweta</div>
+          <div class="test-role">Premed Parent · 1:1 Consultation Client</div>
+        </div>
       </div>
-      <div class="test-card reveal" style="transition-delay:0.1s">
-        <p>Your blogs are very informative. Thanks for spreading this awareness and clearing up some misconceptions.</p>
-      </div>
-      <div class="test-card reveal" style="transition-delay:0.05s">
-        <p>So insightful. That message about rank is really helpful as well.</p>
-      </div>
-      <div class="test-card reveal" style="transition-delay:0.1s">
-        <p>There are many unsubstantiated comments online, but nobody to take accountability for the decisions students make based on them.</p>
-      </div>
-      <div class="test-card reveal" style="transition-delay:0.15s">
-        <p>Thank you for taking the time to do this for everyone. Your clarification means a lot.</p>
+      <div class="test-card featured reveal" style="transition-delay:0.14s">
+        <p>It really opened my mind to other options and routes I could take. Most importantly, I became more assured in this track — that if I was to fail, I would have a cushion to fall back on. I would definitely recommend this program for anyone interested in medicine and accelerating their pathway.</p>
+        <div class="test-attribution">
+          <div class="test-name">Aisha</div>
+          <div class="test-role">Fast Track Foundations Student</div>
+        </div>
       </div>
     </div>
   </div>
@@ -910,11 +971,12 @@
       <div class="gold-divider"></div>
     </div>
     <div class="courses-grid">
-      <div class="course-card reveal">
-        <h3>Fast Track Foundations</h3>
-        <p>The strategic mindset behind accelerated medical pathways. Learn how the traditional timeline is inefficient and how to design multiple contingency plans toward medical school.</p>
-        <div class="course-price">$44.99</div>
-        <a href="https://fasttracktomd.com/instructor-bio" target="_blank" class="course-btn">Get Foundations</a>
+      <div class="course-card course-card--muted reveal">
+        <div class="course-badge" style="background:rgba(0,0,0,0.05);color:var(--muted)">Starter</div>
+        <h3 style="color:var(--muted)">Fast Track Foundations</h3>
+        <p style="font-size:13px;">The strategic mindset behind accelerated medical pathways. Already included with Fast Track Intensive.</p>
+        <div class="course-price" style="font-size:24px;color:var(--silver)">$44.99</div>
+        <a href="https://fasttracktomd.com/instructor-bio" target="_blank" class="course-btn" style="background:var(--paper);color:var(--muted);font-size:12px;">Learn More</a>
       </div>
       <div class="course-card featured reveal" style="transition-delay:0.1s">
         <div class="course-badge">Most Complete</div>
@@ -929,6 +991,18 @@
         <p>A live physician-panel experience with clinical hours, research mentorship opportunity, and a letter of recommendation option. 15 seats. Modules begin May 18.</p>
         <div class="course-price"><span class="from">Tuition if selected</span>$349.99</div>
         <a href="https://grandrounds.fasttracktomd.com" target="_blank" class="course-btn dark">Apply Free</a>
+      </div>
+      <div class="course-card consulting-card reveal" style="transition-delay:0.3s">
+        <div class="course-badge" style="background:rgba(245,194,0,0.12);color:var(--gold);border:1px solid rgba(245,194,0,0.3)">Selective</div>
+        <h3>1-on-1 Consulting</h3>
+        <p>Direct access to Dr. Samarrai. Built for high school students and college freshmen and sophomores who are serious about accelerating their path to medicine — before the window closes.</p>
+        <div class="consulting-services">
+          <div class="consulting-service-item">BS/MD &amp; BA/MD Program Strategy</div>
+          <div class="consulting-service-item">Early Assurance Program (EAP) Planning</div>
+          <div class="consulting-service-item">Accelerated &amp; Optimized Timeline Design</div>
+          <div class="consulting-service-item">Application &amp; Profile Positioning</div>
+        </div>
+        <a href="mailto:mdnow@fasttracktomd.com" class="course-btn consulting-btn">Contact Us to Learn More</a>
       </div>
     </div>
   </div>
