@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>3-Year Medical Schools with Directed Residency Pathways — Fast Track to MD</title>
+<meta name="description" content="The complete list of 3-year medical schools with directed or affiliated residency pathways, organized by specialty. Built by Dr. Samarrai, fellowship-trained physician who graduated medical school at 23."/>
+<meta name="keywords" content="3-year medical school, accelerated MD, CAMPP, directed residency, 3 year MD programs, accelerated medical school programs"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400;1,600&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --gold: #F5C200;
+    --black: #0A0A0A;
+    --charcoal: #1A1A1A;
+    --dark: #222222;
+    --silver: #B8B8B2;
+    --offwhite: #F7F5F0;
+    --paper: #EFEFEC;
+    --white: #FFFFFF;
+    --mid: #D0CFC8;
+    --muted: #6B6B60;
+    --text: #111111;
+    --gold-lt: rgba(245,194,0,0.10);
+    --gold-bd: rgba(245,194,0,0.25);
+    --green: #2D7A52;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--offwhite);
+    color: var(--text);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px; line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1000; opacity: 0.5;
+  }
+
+  .eyebrow {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 11px;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold);
+  }
+  h1,h2,h3,h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; }
+  a { text-decoration: none; color: inherit; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: rgba(10,10,10,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #222;
+    height: 60px; padding: 0 48px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 16px;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--white);
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600; font-size: 12px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); transition: color 0.15s;
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--gold); color: var(--black) !important;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 12px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 8px 20px; border-radius: 2px; transition: opacity 0.15s;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* ── HERO ── */
+  .page-hero {
+    background: var(--black);
+    padding: 120px 48px 72px;
+    position: relative; overflow: hidden;
+  }
+  .page-hero::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 80% at 70% 40%, rgba(245,194,0,0.04) 0%, transparent 65%),
+      radial-gradient(ellipse 40% 50% at 10% 90%, rgba(245,194,0,0.03) 0%, transparent 55%);
+  }
+  .page-hero-inner {
+    max-width: 900px; margin: 0 auto;
+    position: relative; z-index: 1;
+  }
+  .page-hero h1 {
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 1; color: var(--white);
+    margin: 16px 0 20px;
+  }
+  .page-hero h1 span { color: var(--gold); }
+  .page-hero-sub {
+    font-size: 17px; color: rgba(255,255,255,0.55);
+    max-width: 620px; line-height: 1.65; margin-bottom: 28px;
+  }
+  .disclaimer-box {
+    background: rgba(245,194,0,0.08);
+    border: 1px solid rgba(245,194,0,0.2);
+    border-left: 3px solid var(--gold);
+    border-radius: 2px;
+    padding: 14px 20px;
+    font-size: 13px; color: rgba(255,255,255,0.5);
+    line-height: 1.55; max-width: 620px;
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--charcoal);
+    border-bottom: 1px solid #2a2a2a;
+    padding: 0 48px;
+  }
+  .stats-bar-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; gap: 0;
+  }
+  .stat-item {
+    padding: 20px 40px 20px 0;
+    border-right: 1px solid #2a2a2a;
+    margin-right: 40px;
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 32px;
+    color: var(--gold); line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4); margin-top: 2px;
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main-wrap {
+    max-width: 1200px; margin: 0 auto;
+    padding: 48px 48px 80px;
+  }
+
+  /* ── CONTROLS ── */
+  .controls {
+    display: flex; gap: 16px; margin-bottom: 32px;
+    flex-wrap: wrap; align-items: flex-start;
+  }
+  .search-wrap {
+    position: relative; flex: 1; min-width: 240px;
+  }
+  .search-wrap svg {
+    position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+    color: var(--muted); pointer-events: none;
+  }
+  #searchInput {
+    width: 100%;
+    background: var(--white);
+    border: 1px solid var(--mid);
+    border-radius: 2px;
+    padding: 12px 14px 12px 42px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px; color: var(--text);
+    outline: none; transition: border-color 0.15s;
+  }
+  #searchInput::placeholder { color: var(--muted); }
+  #searchInput:focus { border-color: var(--gold); }
+
+  .view-toggle {
+    display: flex; gap: 0;
+    border: 1px solid var(--mid); border-radius: 2px; overflow: hidden;
+  }
+  .view-btn {
+    padding: 12px 18px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 12px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    background: var(--white); border: none;
+    color: var(--muted); cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+    border-right: 1px solid var(--mid);
+  }
+  .view-btn:last-child { border-right: none; }
+  .view-btn.active {
+    background: var(--black); color: var(--gold);
+  }
+
+  /* ── SPECIALTY FILTER PILLS ── */
+  .filter-section { margin-bottom: 32px; }
+  .filter-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 11px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 10px;
+  }
+  .pills-wrap {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .pill {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 6px 14px; border-radius: 2px;
+    border: 1px solid var(--mid);
+    background: var(--white); color: var(--muted);
+    cursor: pointer; transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .pill:hover { border-color: var(--gold); color: var(--text); }
+  .pill.active {
+    background: var(--gold); border-color: var(--gold);
+    color: var(--black);
+  }
+
+  /* ── RESULTS COUNT ── */
+  .results-info {
+    font-size: 13px; color: var(--muted);
+    margin-bottom: 20px;
+  }
+  .results-info strong { color: var(--text); }
+
+  /* ── SPECIALTY VIEW ── */
+  #specialtyView {}
+  .spec-block {
+    background: var(--white);
+    border: 1px solid var(--mid);
+    border-radius: 2px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+  .spec-block:hover { border-color: #b8b8b2; }
+  .spec-header {
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    cursor: pointer;
+    user-select: none;
+    gap: 16px;
+  }
+  .spec-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 18px;
+    letter-spacing: 0.02em; color: var(--text);
+    flex: 1;
+  }
+  .spec-count {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 12px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); white-space: nowrap;
+  }
+  .spec-chevron {
+    color: var(--muted); transition: transform 0.2s;
+    flex-shrink: 0;
+  }
+  .spec-block.open .spec-chevron { transform: rotate(180deg); }
+  .spec-body {
+    display: none;
+    padding: 0 24px 20px;
+    border-top: 1px solid var(--paper);
+  }
+  .spec-block.open .spec-body { display: block; }
+  .school-chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding-top: 16px;
+  }
+  .school-chip {
+    font-family: 'Barlow', sans-serif;
+    font-size: 13px; font-weight: 500;
+    color: var(--text);
+    background: var(--offwhite);
+    border: 1px solid var(--mid);
+    border-radius: 2px;
+    padding: 6px 12px;
+    transition: all 0.12s;
+  }
+  .school-chip:hover {
+    background: var(--gold-lt);
+    border-color: var(--gold-bd);
+    color: var(--black);
+  }
+  .school-chip.highlight {
+    background: var(--gold-lt);
+    border-color: var(--gold-bd);
+  }
+  .spec-note {
+    font-size: 12px; color: var(--muted);
+    margin-top: 12px; font-style: italic;
+  }
+
+  /* ── SCHOOL VIEW ── */
+  #schoolView { display: none; }
+  .school-card {
+    background: var(--white);
+    border: 1px solid var(--mid);
+    border-radius: 2px;
+    padding: 20px 24px;
+    margin-bottom: 10px;
+    transition: border-color 0.15s;
+  }
+  .school-card:hover { border-color: #b8b8b2; }
+  .school-card-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800; font-size: 20px;
+    color: var(--text); margin-bottom: 12px;
+  }
+  .spec-pills {
+    display: flex; flex-wrap: wrap; gap: 6px;
+  }
+  .spec-pill {
+    font-family: 'Barlow', sans-serif;
+    font-size: 12px; font-weight: 500;
+    color: var(--muted);
+    background: var(--offwhite);
+    border: 1px solid var(--mid);
+    border-radius: 2px;
+    padding: 4px 10px;
+  }
+  .school-count-badge {
+    display: inline-flex; align-items: center;
+    background: var(--gold-lt);
+    border: 1px solid var(--gold-bd);
+    border-radius: 2px;
+    padding: 3px 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700; font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: #8a6d00;
+    margin-bottom: 8px;
+  }
+
+  /* ── LEGEND ── */
+  .legend-bar {
+    background: var(--charcoal);
+    border: 1px solid #2a2a2a;
+    border-radius: 2px;
+    padding: 16px 24px;
+    margin-bottom: 28px;
+    display: flex; gap: 24px; flex-wrap: wrap; align-items: center;
+  }
+  .legend-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; color: rgba(255,255,255,0.5);
+  }
+  .legend-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold); flex-shrink: 0;
+  }
+
+  /* ── EMAIL BAND ── */
+  .email-band {
+    background: var(--black);
+    border-top: 1px solid #1a1a1a;
+    padding: 56px 48px;
+  }
+  .email-band-inner {
+    max-width: 900px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 40px; flex-wrap: wrap;
+  }
+  .email-band h2 {
+    font-size: 32px; color: var(--white); line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .email-band h2 span { color: var(--gold); }
+  .email-band p {
+    font-size: 14px; color: rgba(255,255,255,0.45);
+    max-width: 420px; line-height: 1.6;
+  }
+  .email-btn {
+    display: inline-block;
+    background: var(--gold); color: var(--black);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 13px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 16px 32px; border-radius: 2px;
+    white-space: nowrap; transition: opacity 0.15s;
+  }
+  .email-btn:hover { opacity: 0.85; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black); border-top: 1px solid #1a1a1a;
+    padding: 28px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900; font-size: 14px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-links { display: flex; gap: 24px; list-style: none; }
+  .footer-links a {
+    font-size: 12px; color: rgba(255,255,255,0.3);
+    transition: color 0.15s; letter-spacing: 0.05em;
+  }
+  .footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+  /* ── EMPTY STATE ── */
+  .empty-state {
+    text-align: center; padding: 64px 24px;
+    color: var(--muted);
+  }
+  .empty-state h3 {
+    font-size: 20px; margin-bottom: 8px; color: var(--text);
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .page-hero { padding: 90px 20px 48px; }
+    .stats-bar { padding: 0 20px; }
+    .stats-bar-inner { gap: 0; flex-wrap: wrap; }
+    .stat-item { padding: 16px 24px 16px 0; margin-right: 24px; }
+    .main-wrap { padding: 32px 20px 60px; }
+    .controls { flex-direction: column; }
+    .view-toggle { align-self: flex-start; }
+    .email-band { padding: 40px 20px; }
+    .email-band-inner { flex-direction: column; }
+    footer { padding: 20px; flex-direction: column; gap: 12px; }
+    .spec-header { padding: 14px 16px; }
+    .spec-body { padding: 0 16px 16px; }
+    .school-card { padding: 16px; }
+    .legend-bar { padding: 12px 16px; gap: 12px; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .spec-block, .school-card { animation: fadeIn 0.2s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://fasttracktomd.com" class="nav-logo">Fast Track <span>to MD</span></a>
+  <ul class="nav-links">
+    <li><a href="https://fasttracktomd.com#resources">Resources</a></li>
+    <li><a href="https://fasttracktomd.com/bsmd-programs">BS/MD Programs</a></li>
+    <li><a href="https://blog.fasttracktomd.com/" target="_blank">Blog</a></li>
+    <li><a href="https://fasttracktomd.com#courses">Courses</a></li>
+    <li><a href="https://fasttracktomd.beehiiv.com" target="_blank" class="nav-cta">Join the List</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Plan D — Accelerated Pathway Resource</div>
+    <h1>3-Year Medical Schools<br/><span>with Directed Residency Pathways</span></h1>
+    <p class="page-hero-sub">
+      These programs allow students to complete their MD in 3 years — not as a lesser track, but as a strategic lever. Each school below has affiliated or directed residency pathways in specific specialties.
+    </p>
+    <div class="disclaimer-box">
+      <strong style="color:rgba(255,255,255,0.7);">Disclaimer:</strong> This list reflects publicly available information at the time of compilation and may change. Students must confirm all details directly with individual medical school and residency program websites. Information is compiled from publicly available sources and updated periodically.
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="stat-item">
+      <div class="stat-num" id="statSchools">36</div>
+      <div class="stat-label">Medical Schools</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">21</div>
+      <div class="stat-label">Specialties Covered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">Years to MD</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="font-size:20px;padding-top:6px;">Plan D</div>
+      <div class="stat-label">of the A–E Framework</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrap">
+
+  <!-- LEGEND -->
+  <div class="legend-bar">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.4);margin:0;">How to use this list</div>
+    <div class="legend-item">
+      <div class="legend-dot"></div>
+      <span>Browse by specialty to see which schools offer that pathway</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:rgba(255,255,255,0.3);"></div>
+      <span>Switch to school view to see all specialties a school covers</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-dot" style="background:rgba(255,255,255,0.3);"></div>
+      <span>Search by school name or specialty to filter instantly</span>
+    </div>
+  </div>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <div class="search-wrap">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="searchInput" placeholder="Search by school or specialty…" autocomplete="off"/>
+    </div>
+    <div class="view-toggle">
+      <button class="view-btn active" id="btnSpec" onclick="setView('specialty')">By Specialty</button>
+      <button class="view-btn" id="btnSchool" onclick="setView('school')">By School</button>
+    </div>
+  </div>
+
+  <!-- SPECIALTY FILTER PILLS -->
+  <div class="filter-section" id="specialtyFilters">
+    <div class="filter-label">Filter by specialty</div>
+    <div class="pills-wrap" id="pillsWrap"></div>
+  </div>
+
+  <!-- RESULTS INFO -->
+  <div class="results-info" id="resultsInfo"></div>
+
+  <!-- SPECIALTY VIEW -->
+  <div id="specialtyView"></div>
+
+  <!-- SCHOOL VIEW -->
+  <div id="schoolView"></div>
+
+</div><!-- /main-wrap -->
+
+<!-- EMAIL BAND -->
+<div class="email-band">
+  <div class="email-band-inner">
+    <div>
+      <h2>Timeline alerts.<br/><span>No noise.</span></h2>
+      <p>Accelerated pathway updates, 3-year program changes, and early assurance deadlines — delivered when it matters.</p>
+    </div>
+    <a href="https://fasttracktomd.beehiiv.com" target="_blank" class="email-btn">Join the Free Newsletter</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Fast Track <span>to MD</span></div>
+  <ul class="footer-links">
+    <li><a href="https://fasttracktomd.com/privacy-policy">Privacy Policy</a></li>
+    <li><a href="https://fasttracktomd.com/terms-of-use">Terms of Use</a></li>
+    <li><a href="https://fasttracktomd.com/disclaimer">Disclaimer</a></li>
+    <li><a href="mailto:mdnow@fasttracktomd.com">Contact</a></li>
+  </ul>
+  <div style="font-size:12px;color:rgba(255,255,255,0.25);">Copyright &copy; 2025 Fast Track to MD. All rights reserved.</div>
+</footer>
+
+<script>
+// ─────────────────────────────────────────────────
+// DATA
+// ─────────────────────────────────────────────────
+const DATA = [
+  {
+    specialty: "Anesthesiology",
+    schools: ["NYU Grossman", "Hackensack Meridian", "Wayne State", "VCU", "Stony Brook", "Miller Miami"]
+  },
+  {
+    specialty: "Cardiothoracic Surgery",
+    schools: ["NYU Grossman"]
+  },
+  {
+    specialty: "Dermatology",
+    schools: ["NYU Grossman", "Wayne State", "Stony Brook"]
+  },
+  {
+    specialty: "Emergency Medicine",
+    schools: ["NYU Grossman", "Penn State", "MUSC", "WVU", "VCU", "Hackensack Meridian", "University of Oklahoma (SCM)", "University of Kentucky", "Medical College of Georgia", "Miller Miami", "Upstate Medical University"]
+  },
+  {
+    specialty: "Family Medicine",
+    schools: ["Arkansas", "Rutgers NJMS", "Geisinger", "Mercer", "MUSC", "Texas Tech", "UC Davis", "UMass Chan", "UNC", "WVU", "Wayne State", "Wright State University", "VCU", "University of Oklahoma (SCM)", "University of Louisville", "Ohio State", "University of Tennessee", "Medical College of Georgia", "UMass", "Miller Miami", "University of Oklahoma–Tulsa", "University of Arizona College of Medicine", "Upstate Medical University", "Penn State"]
+  },
+  {
+    specialty: "General Surgery",
+    schools: ["NYU Grossman", "Stony Brook", "SUNY Upstate", "University of Oklahoma (SCM)", "Medical College of Wisconsin", "UNC", "Medical College of Georgia", "Miller Miami", "Upstate Medical University"]
+  },
+  {
+    specialty: "Internal Medicine",
+    schools: ["Arkansas", "Rutgers NJMS", "NYU Grossman", "Geisinger", "MUSC", "Penn State", "Wayne State", "WVU", "University of Oklahoma (SCM)", "Mercer", "UC Davis", "VCU", "Cooper Medical School", "University of Kentucky", "University of Tennessee", "Medical College of Georgia", "UMass", "Miller Miami", "University of Oklahoma–Tulsa", "University of Arizona College of Medicine", "Upstate Medical University"]
+  },
+  {
+    specialty: "Medicine–Pediatrics",
+    schools: ["Rutgers NJMS", "Stony Brook", "UTHSC", "WVU", "University of Tennessee", "Miller Miami"]
+  },
+  {
+    specialty: "Neurology",
+    schools: ["NYU Grossman", "MUSC", "Penn State", "WVU", "Hackensack Meridian", "University of Kentucky", "University of Tennessee", "Miller Miami", "Upstate Medical University"]
+  },
+  {
+    specialty: "Neurosurgery",
+    schools: ["NYU Grossman", "Penn State", "Miller Miami"]
+  },
+  {
+    specialty: "OB/GYN",
+    schools: ["Rutgers NJMS", "NYU Grossman", "MUSC", "WVU", "VCU", "Hackensack Meridian", "University of Oklahoma (SCM)", "Rutgers NJMS", "Medical College of Georgia", "Miller Miami"]
+  },
+  {
+    specialty: "Orthopedic Surgery",
+    schools: ["NYU Grossman", "Penn State", "Stony Brook", "Duke", "MUSC", "Miller Miami"]
+  },
+  {
+    specialty: "Otolaryngology (ENT)",
+    schools: ["NYU Grossman", "Wayne State"]
+  },
+  {
+    specialty: "Pathology",
+    schools: ["NYU Grossman", "MUSC", "Penn State", "WVU", "VCU", "Miller Miami", "Upstate Medical University"]
+  },
+  {
+    specialty: "Pediatrics",
+    schools: ["Rutgers NJMS", "NYU Grossman", "MUSC", "WVU", "Hackensack Meridian", "University of Oklahoma (SCM)", "Cooper Medical School", "Wright State University", "UNC", "VCU", "Arkansas", "University of Tennessee", "Medical College of Georgia", "UMass", "Miller Miami", "University of Oklahoma–Tulsa", "University of Arizona College of Medicine", "Upstate Medical University", "Penn State"]
+  },
+  {
+    specialty: "Preventive Medicine",
+    schools: ["Wayne State"]
+  },
+  {
+    specialty: "PM&R",
+    schools: ["Miller Miami"]
+  },
+  {
+    specialty: "Primary Care (NOS)",
+    schools: ["Medical College of Wisconsin"],
+    note: "Primary Care — not otherwise specified"
+  },
+  {
+    specialty: "Psychiatry",
+    schools: ["Rutgers NJMS", "NYU Grossman", "MUSC", "WVU", "Hackensack Meridian", "University of Oklahoma (SCM)", "UC Davis", "Medical College of Wisconsin", "UNC", "VCU", "University of Tennessee", "Medical College of Georgia", "UMass", "Miller Miami", "Upstate Medical University", "Penn State"]
+  },
+  {
+    specialty: "Radiology / Radiation Oncology",
+    schools: ["NYU Grossman", "SUNY Upstate", "Miller Miami", "Upstate Medical University"]
+  },
+  {
+    specialty: "Urology",
+    schools: ["NYU Grossman", "Miller Miami", "Upstate Medical University"]
+  },
+  {
+    specialty: "Residency of Choice",
+    schools: ["Stony Brook", "Hackensack Meridian"],
+    note: "These programs offer a \"residency of choice\" pathway — specialty not pre-specified"
+  },
+  {
+    specialty: "Unclear / Unspecified",
+    schools: ["Meharry", "Rush", "University of Wisconsin–Madison", "Elson S. Floyd College of Medicine (WSU)"],
+    note: "These schools have 3-year tracks but residency pathway details are unspecified or unclear at time of compilation"
+  }
+];
+
+// De-dupe schools within each specialty
+DATA.forEach(d => { d.schools = [...new Set(d.schools)]; });
+
+// Build school → specialty map
+const schoolMap = {};
+DATA.forEach(d => {
+  d.schools.forEach(s => {
+    if (!schoolMap[s]) schoolMap[s] = [];
+    if (!schoolMap[s].includes(d.specialty)) schoolMap[s].push(d.specialty);
+  });
+});
+const allSchools = Object.keys(schoolMap).sort();
+
+// ─────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────
+let currentView = 'specialty';
+let activeSpecialty = null;
+let searchTerm = '';
+
+// ─────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  buildPills();
+  renderSpecialtyView();
+  updateResultsInfo();
+
+  document.getElementById('searchInput').addEventListener('input', e => {
+    searchTerm = e.target.value.toLowerCase().trim();
+    render();
+  });
+});
+
+// ─────────────────────────────────────────────────
+// VIEW TOGGLE
+// ─────────────────────────────────────────────────
+function setView(v) {
+  currentView = v;
+  document.getElementById('btnSpec').classList.toggle('active', v === 'specialty');
+  document.getElementById('btnSchool').classList.toggle('active', v === 'school');
+  document.getElementById('specialtyView').style.display = v === 'specialty' ? '' : 'none';
+  document.getElementById('schoolView').style.display = v === 'school' ? '' : 'none';
+  document.getElementById('specialtyFilters').style.display = v === 'specialty' ? '' : 'none';
+  render();
+}
+
+// ─────────────────────────────────────────────────
+// BUILD PILLS
+// ─────────────────────────────────────────────────
+function buildPills() {
+  const wrap = document.getElementById('pillsWrap');
+  wrap.innerHTML = '';
+
+  const allBtn = document.createElement('button');
+  allBtn.className = 'pill active';
+  allBtn.textContent = 'All Specialties';
+  allBtn.dataset.spec = '';
+  allBtn.onclick = () => { activeSpecialty = null; updatePills(''); render(); };
+  wrap.appendChild(allBtn);
+
+  DATA.forEach(d => {
+    const btn = document.createElement('button');
+    btn.className = 'pill';
+    btn.textContent = d.specialty;
+    btn.dataset.spec = d.specialty;
+    btn.onclick = () => {
+      activeSpecialty = d.specialty;
+      updatePills(d.specialty);
+      render();
+    };
+    wrap.appendChild(btn);
+  });
+}
+
+function updatePills(active) {
+  document.querySelectorAll('.pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.spec === active);
+  });
+}
+
+// ─────────────────────────────────────────────────
+// RENDER DISPATCH
+// ─────────────────────────────────────────────────
+function render() {
+  if (currentView === 'specialty') renderSpecialtyView();
+  else renderSchoolView();
+  updateResultsInfo();
+}
+
+// ─────────────────────────────────────────────────
+// SPECIALTY VIEW
+// ─────────────────────────────────────────────────
+function renderSpecialtyView() {
+  const container = document.getElementById('specialtyView');
+  container.style.display = '';
+
+  let rows = DATA;
+
+  // Filter by active specialty pill
+  if (activeSpecialty) {
+    rows = rows.filter(d => d.specialty === activeSpecialty);
+  }
+
+  // Filter by search
+  if (searchTerm) {
+    rows = rows.filter(d => {
+      const specMatch = d.specialty.toLowerCase().includes(searchTerm);
+      const schoolMatch = d.schools.some(s => s.toLowerCase().includes(searchTerm));
+      return specMatch || schoolMatch;
+    });
+  }
+
+  if (rows.length === 0) {
+    container.innerHTML = `<div class="empty-state"><h3>No results found</h3><p>Try adjusting your search or clearing the specialty filter.</p></div>`;
+    return;
+  }
+
+  container.innerHTML = rows.map((d, i) => {
+    const filteredSchools = searchTerm
+      ? d.schools.filter(s => s.toLowerCase().includes(searchTerm) || d.specialty.toLowerCase().includes(searchTerm))
+      : d.schools;
+    const displaySchools = searchTerm && !d.specialty.toLowerCase().includes(searchTerm) ? filteredSchools : d.schools;
+
+    return `
+    <div class="spec-block" style="animation-delay:${i * 0.02}s">
+      <div class="spec-header" onclick="toggleBlock(this)">
+        <div class="spec-name">${d.specialty}</div>
+        <div class="spec-count">${d.schools.length} school${d.schools.length !== 1 ? 's' : ''}</div>
+        <svg class="spec-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 9 6 6 6-6"/></svg>
+      </div>
+      <div class="spec-body">
+        <div class="school-chips">
+          ${d.schools.map(s => {
+            const hl = searchTerm && s.toLowerCase().includes(searchTerm) ? ' highlight' : '';
+            return `<div class="school-chip${hl}">${s}</div>`;
+          }).join('')}
+        </div>
+        ${d.note ? `<div class="spec-note">${d.note}</div>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+
+  // Auto-open if filtered to one result or specialty selected
+  if (rows.length === 1 || activeSpecialty) {
+    container.querySelectorAll('.spec-block').forEach(b => b.classList.add('open'));
+  }
+}
+
+function toggleBlock(header) {
+  header.closest('.spec-block').classList.toggle('open');
+}
+
+// ─────────────────────────────────────────────────
+// SCHOOL VIEW
+// ─────────────────────────────────────────────────
+function renderSchoolView() {
+  const container = document.getElementById('schoolView');
+  container.style.display = '';
+
+  let schools = allSchools;
+
+  if (searchTerm) {
+    schools = schools.filter(s => {
+      const nameMatch = s.toLowerCase().includes(searchTerm);
+      const specMatch = schoolMap[s].some(sp => sp.toLowerCase().includes(searchTerm));
+      return nameMatch || specMatch;
+    });
+  }
+
+  if (schools.length === 0) {
+    container.innerHTML = `<div class="empty-state"><h3>No results found</h3><p>Try adjusting your search.</p></div>`;
+    return;
+  }
+
+  container.innerHTML = schools.map((s, i) => {
+    const specs = schoolMap[s];
+    return `
+    <div class="school-card" style="animation-delay:${i * 0.015}s">
+      <div class="school-count-badge">${specs.length} specialt${specs.length !== 1 ? 'ies' : 'y'}</div>
+      <div class="school-card-name">${s}</div>
+      <div class="spec-pills">
+        ${specs.map(sp => `<span class="spec-pill">${sp}</span>`).join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─────────────────────────────────────────────────
+// RESULTS INFO
+// ─────────────────────────────────────────────────
+function updateResultsInfo() {
+  const info = document.getElementById('resultsInfo');
+  if (currentView === 'specialty') {
+    let rows = DATA;
+    if (activeSpecialty) rows = rows.filter(d => d.specialty === activeSpecialty);
+    if (searchTerm) rows = rows.filter(d => d.specialty.toLowerCase().includes(searchTerm) || d.schools.some(s => s.toLowerCase().includes(searchTerm)));
+    const total = rows.reduce((acc, d) => acc + d.schools.length, 0);
+    info.innerHTML = `Showing <strong>${rows.length}</strong> specialt${rows.length !== 1 ? 'ies' : 'y'} · <strong>${total}</strong> school listing${total !== 1 ? 's' : ''}`;
+  } else {
+    let schools = allSchools;
+    if (searchTerm) schools = schools.filter(s => s.toLowerCase().includes(searchTerm) || schoolMap[s].some(sp => sp.toLowerCase().includes(searchTerm)));
+    info.innerHTML = `Showing <strong>${schools.length}</strong> school${schools.length !== 1 ? 's' : ''}`;
+  }
+}
+</script>
+</body>
+</html>
