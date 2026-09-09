@@ -106,10 +106,31 @@
     .hero-sub {
       font-family: 'Barlow', sans-serif;
       font-size: 19px; font-weight: 400; line-height: 1.75;
-      color: var(--text-soft); margin-bottom: 48px; max-width: 480px;
+      color: var(--text-soft); margin-bottom: 28px; max-width: 620px;
     }
 
     .hero-sub strong { color: var(--black); font-weight: 600; }
+    .hero-sub-p { display: block; }
+    .hero-sub-p + .hero-sub-p { margin-top: 18px; }
+
+    .hero-bullets {
+      list-style: none; margin: 0 0 28px; padding: 0;
+      display: flex; flex-direction: column; gap: 16px; max-width: 620px;
+    }
+    .hero-bullets li {
+      font-family: 'Barlow', sans-serif;
+      font-size: 21px; font-weight: 500; line-height: 1.4; color: var(--black);
+      padding-left: 40px; position: relative;
+    }
+    .hero-bullets li::before {
+      content: '\2192'; position: absolute; left: 0; top: 0;
+      color: var(--gold); font-weight: 700; font-size: 22px;
+    }
+    .hero-bullets-close {
+      font-family: 'Barlow', sans-serif;
+      font-size: 19px; font-weight: 600; line-height: 1.5;
+      color: var(--black); margin-bottom: 48px;
+    }
 
     .hero-cta-group { display: flex; flex-direction: column; gap: 16px; }
 
@@ -213,7 +234,7 @@
     /* ===== PROBLEM ===== */
     .problem { background: var(--off-white); }
 
-    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .problem-grid { display: grid; grid-template-columns: 1fr; gap: 80px; align-items: center; max-width: 640px; margin: 0 auto; }
 
     .problem-text {
       font-size: 20px; font-weight: 300; line-height: 1.8;
@@ -324,6 +345,19 @@
     .pricing-btn { display: block; background: var(--black); color: var(--white); font-family: 'Barlow Condensed', sans-serif; font-size: 19px; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; padding: 22px 48px; text-decoration: none; text-align: center; transition: background 0.2s; margin-bottom: 16px; }
     .pricing-btn:hover { background: var(--gold); color: var(--black); }
     .pricing-guarantee { font-size: 15px; color: rgba(10,10,10,0.35); letter-spacing: 0.05em; }
+    .guarantee-box {
+      border: 1px solid var(--gold); background: rgba(201,168,76,0.06);
+      padding: 22px 24px; margin: 8px 0 20px; text-align: left;
+    }
+    .guarantee-box .g-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 18px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--black); margin-bottom: 8px; display: flex; align-items: center; gap: 8px;
+    }
+    .guarantee-box .g-text {
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px; font-weight: 400; line-height: 1.6; color: var(--text-soft);
+    }
 
     /* ===== FAQ ===== */
     .faq { background: var(--off-white); }
@@ -493,11 +527,19 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div style="max-width:900px; margin:0 auto; width:100%; padding:0;">
+    <div style="max-width:1200px; margin:0 auto; width:100%; padding:0;">
       <div class="hero-left">
         <div class="hero-eyebrow">For Premed Families</div>
-        <h1 class="hero-h1"><em>74.3%</em> of medical students took at least one <span style="color:#c0392b; text-decoration:underline; text-decoration-color:#c0392b;">gap year</span> before starting medical school.</h1>
-        <p class="hero-sub">That&rsquo;s not a choice &mdash; that&rsquo;s what happens when no one gives you the roadmap early enough.<br><span style="font-size:14px; opacity:0.5;">— AAMC, 2024</span></p>
+        <h1 class="hero-h1">What if the only reason you don&rsquo;t get into an accelerated medical pathway is because you didn&rsquo;t even know about them <em>in time?</em></h1>
+        <p class="hero-sub"><span class="hero-sub-p">It&rsquo;s heartbreaking when very bright and impressive students don&rsquo;t get a chance at these life-changing pathways just because they didn&rsquo;t have the right information early enough.</span><span class="hero-sub-p">In just 3 modules you&rsquo;ll know everything you need to know about:</span></p>
+        <ul class="hero-bullets">
+          <li>BS/MD programs</li>
+          <li>Early assurance pathways</li>
+          <li>MCAT-optional programs</li>
+          <li>3-year medical school</li>
+          <li>Acceleration strategies that are vetted and verified</li>
+        </ul>
+        <p class="hero-bullets-close">Designed by a surgeon who actually did it.</p>
       </div>
     </div>
   </section>
@@ -506,33 +548,6 @@
   <div class="tension-bar">
     <p class="tension-text">The families that know these strategies <em>are already ahead.</em></p>
   </div>
-
-  <!-- STORY -->
-  <section class="story-section">
-    <div class="story-grid">
-      <div>
-        <img src="https://embed.filekitcdn.com/e/s6GadSXTnTEH4NbfMA6nsg/fPhxTiqQDwR7w8MsMuPXFx/email" alt="Dr. Ruwaa Samarrai" style="width:100%; max-width:200px; height:260px; object-fit:cover; object-position:top; display:block; border-radius:16px 16px 0 0;" />
-        <div style="background:var(--gold); padding:14px 16px; text-align:center; margin-top:2px;">
-          <span style="font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:700; color:var(--black); line-height:1; display:block;">23</span>
-          <span style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--black); display:block; margin-top:2px;">MD at Age 23</span>
-        </div>
-      </div>
-      <div>
-        <p style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:800; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">Dr. Ruwaa Samarrai, MD</p>
-        <p style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(10,10,10,0.45); margin-bottom:28px;">Pediatric Fellowship-Trained Otolaryngologist &mdash; Head &amp; Neck Surgeon</p>
-        <p class="story-quote">Becoming a doctor is long and competitive. But these strategies got me my MD at 23. And now I&rsquo;m showing you exactly what to do so you stay on the fast track too.</p>
-        <p style="font-family:'Barlow',sans-serif; font-size:18px; font-weight:300; line-height:1.8; color:var(--text-soft); margin-bottom:18px;">I completed a 7-year BA/MD pathway and earned my MD at 23. I matched into a competitive surgical subspecialty, sat on admissions and ranking committees, and built Fast Track to MD because I know firsthand what it takes to make it to the other side.</p>
-        <p style="font-family:'Barlow',sans-serif; font-size:18px; font-weight:600; line-height:1.8; color:var(--black);">Get advice from someone who actually completed the path you&rsquo;re on. Now you don&rsquo;t have to figure it out alone.</p>
-        <ul style="list-style:none; margin-top:24px; display:flex; flex-direction:column; gap:10px;">
-          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>MD at age 23 via 7-year BA/MD pathway</li>
-          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Fellowship-trained pediatric ENT surgeon</li>
-          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Matched into competitive surgical subspecialty</li>
-          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Sat on admissions and ranking committees</li>
-          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Graduate of Rutgers BA/MD Program</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
   <!-- PROOF STRIP -->
   <div class="proof-intro">
@@ -570,55 +585,29 @@
     </div>
   </div>
 
-  <!-- PROBLEM -->
-  <section class="problem">
-    <div class="section-inner">
-      <div class="section-eyebrow">The Problem</div>
-      <h2 class="section-h2">Most Families Are Playing<br>by <em>Outdated Rules.</em></h2>
-
-      <div class="problem-grid">
-        <div>
-          <ul class="pain-list">
-            <li class="pain-item">
-              <div class="pain-num">1</div>
-              <p class="pain-text"><strong>The traditional path takes 15–19 years</strong> from high school to practicing physician. Your child could be nearly 40 before they start their career.</p>
-            </li>
-            <li class="pain-item">
-              <div class="pain-num">2</div>
-              <p class="pain-text"><strong>Accelerated pathways exist at 100+ programs</strong> — but almost no one outside medicine knows they're there or how to access them.</p>
-            </li>
-            <li class="pain-item">
-              <div class="pain-num">3</div>
-              <p class="pain-text"><strong>Most advisors only know the traditional path.</strong> They can't teach what they've never done themselves.</p>
-            </li>
-            <li class="pain-item">
-              <div class="pain-num">4</div>
-              <p class="pain-text"><strong>The window to act is high school.</strong> By junior year, most accelerated options are permanently closed.</p>
-            </li>
-          </ul>
+  <!-- STORY -->
+  <section class="story-section">
+    <div class="story-grid">
+      <div>
+        <img src="https://embed.filekitcdn.com/e/s6GadSXTnTEH4NbfMA6nsg/fPhxTiqQDwR7w8MsMuPXFx/email" alt="Dr. Ruwaa Samarrai" style="width:100%; max-width:200px; height:260px; object-fit:cover; object-position:top; display:block; border-radius:16px 16px 0 0;" />
+        <div style="background:var(--gold); padding:14px 16px; text-align:center; margin-top:2px;">
+          <span style="font-family:'Cormorant Garamond',serif; font-size:40px; font-weight:700; color:var(--black); line-height:1; display:block;">23</span>
+          <span style="font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; color:var(--black); display:block; margin-top:2px;">MD at Age 23</span>
         </div>
-        <div class="problem-right">
-          <div class="timeline-vis bad">
-            <div class="tv-label bad">Traditional Path — 15–19 Years</div>
-            <div class="tv-row">
-              <div class="tv-seg" style="flex:4;background:#555;color:rgba(255,255,255,0.7);">HS 4yr</div>
-              <div class="tv-seg" style="flex:4;background:#666;color:rgba(255,255,255,0.7);">UG 4yr</div>
-              <div class="tv-seg" style="flex:4;background:#888;color:rgba(255,255,255,0.8);">MD 4yr</div>
-              <div class="tv-seg" style="flex:5;background:#999;color:rgba(255,255,255,0.8);">Res 3–7yr</div>
-            </div>
-            <div class="tv-total"><span style="color:#c0392b;">15–19 Years</span><small>From 9th grade to practicing physician</small></div>
-          </div>
-          <div class="timeline-vis good">
-            <div class="tv-label good">Fast Track Path — Years Saved</div>
-            <div class="tv-row">
-              <div class="tv-seg" style="flex:4;background:#555;color:rgba(255,255,255,0.7);">HS 4yr</div>
-              <div class="tv-seg" style="flex:3;background:#C9A84C;">BA/MD 3yr</div>
-              <div class="tv-seg" style="flex:3;background:#C9A84C;">MD 4yr</div>
-              <div class="tv-seg" style="flex:5;background:#8c7130;">Res 3–7yr</div>
-            </div>
-            <div class="tv-total"><span style="color:#27ae60;">11–15 Years</span><small>1–3 years back in your child's life</small></div>
-          </div>
-        </div>
+      </div>
+      <div>
+        <p style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:800; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;">Dr. Ruwaa Samarrai, MD</p>
+        <p style="font-family:'Barlow Condensed',sans-serif; font-size:13px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:rgba(10,10,10,0.45); margin-bottom:28px;">Pediatric Fellowship-Trained Otolaryngologist &mdash; Head &amp; Neck Surgeon</p>
+        <p class="story-quote">Becoming a doctor is long and competitive. But these strategies got me my MD at 23. And now I&rsquo;m showing you exactly what to do so you stay on the fast track too.</p>
+        <p style="font-family:'Barlow',sans-serif; font-size:18px; font-weight:300; line-height:1.8; color:var(--text-soft); margin-bottom:18px;">I completed a 7-year BA/MD pathway and earned my MD at 23. I matched into a competitive surgical subspecialty, sat on admissions and ranking committees, and built Fast Track to MD because I know firsthand what it takes to make it to the other side.</p>
+        <p style="font-family:'Barlow',sans-serif; font-size:18px; font-weight:600; line-height:1.8; color:var(--black);">Get advice from someone who actually completed the path you&rsquo;re on. Now you don&rsquo;t have to figure it out alone.</p>
+        <ul style="list-style:none; margin-top:24px; display:flex; flex-direction:column; gap:10px;">
+          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>MD at age 23 via 7-year BA/MD pathway</li>
+          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Fellowship-trained pediatric ENT surgeon</li>
+          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Matched into competitive surgical subspecialty</li>
+          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Sat on admissions and ranking committees</li>
+          <li style="display:flex; align-items:center; gap:12px; font-family:'Barlow',sans-serif; font-size:16px; color:var(--text-soft);"><span style="display:block; width:6px; height:6px; background:var(--gold); flex-shrink:0;"></span>Graduate of Rutgers BA/MD Program</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -644,7 +633,8 @@
   <section class="receive">
     <div class="section-inner">
       <div class="section-eyebrow">Everything Included</div>
-      <h2 class="section-h2">You Receive <em>All</em> of This.</h2>
+      <h2 class="section-h2">Get Your MD/DO <em>1-3 Years Sooner.</em> Avoid the MCAT. Here&rsquo;s How.</h2>
+      <p style="font-family:'Barlow',sans-serif; font-size:19px; font-weight:400; line-height:1.7; color:var(--text-soft); max-width:620px; margin-bottom:44px;">Instead of wasting <strong style="color:var(--black); font-weight:600;">hundreds of hours</strong> lost in Reddit threads and program websites, get everything you need in one place, already vetted and verified.</p>
       <div class="receive-grid">
         <ul style="list-style:none; display:flex; flex-direction:column; gap:28px;">
           <li style="display:flex; flex-direction:column; gap:4px; border-left:3px solid var(--gold); padding-left:20px;">
@@ -715,6 +705,10 @@
           <li>Fast Track Foundations course (free, $44.99 value)</li>
         </ul>
         <a href="https://fasttracktomd.systeme.io/185dc692" class="pricing-btn">Get the Advantage You&rsquo;re Missing</a>
+        <div class="guarantee-box">
+          <div class="g-title">&#128737;&#65039; The 15-Day Watch-It-All Guarantee</div>
+          <p class="g-text">Go through all three modules. If the system doesn&rsquo;t change how you see your student&rsquo;s path to medical school, email us within 15 days of purchase for a full refund. I only ask that you actually complete the course &mdash; because I know it will be life-changing.</p>
+        </div>
         <p class="pricing-guarantee">Questions? Email us at mdnow@fasttracktomd.com</p>
       </div>
     </div>
